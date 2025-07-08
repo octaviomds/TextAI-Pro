@@ -7,7 +7,8 @@ import {
   BookOpen, 
   Zap,
   MessageSquare,
-  PenTool
+  PenTool,
+  Sparkles
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -76,10 +77,10 @@ export default function Sidebar({ onAIAction, isProcessing }: SidebarProps) {
   ];
 
   return (
-    <aside className="w-80 bg-gray-50/50 backdrop-blur-sm border-r border-gray-200/50 p-6 overflow-y-auto">
+    <aside className="w-80 bg-gray-800/50 backdrop-blur-sm border-r border-gray-700/50 p-6 overflow-y-auto">
       <div className="mb-6">
-        <h2 className="text-lg font-semibold text-gray-900 mb-2">Outils IA</h2>
-        <p className="text-sm text-gray-600">
+        <h2 className="text-lg font-semibold text-white mb-2">Outils IA</h2>
+        <p className="text-sm text-gray-300">
           Sélectionnez du texte et choisissez un outil pour l'améliorer avec l'IA
         </p>
       </div>
@@ -92,15 +93,15 @@ export default function Sidebar({ onAIAction, isProcessing }: SidebarProps) {
               key={tool.id}
               onClick={() => onAIAction(tool.id)}
               disabled={isProcessing}
-              className="w-full p-4 text-left bg-white rounded-xl border border-gray-200/50 hover:border-gray-300 hover:shadow-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed group"
+              className="w-full p-4 text-left bg-gray-700/50 rounded-xl border border-gray-600/50 hover:border-gray-500 hover:shadow-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed group"
             >
               <div className="flex items-start space-x-3">
                 <div className={`p-2 rounded-lg ${tool.color} group-hover:scale-105 transition-transform`}>
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-medium text-gray-900 mb-1">{tool.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{tool.description}</p>
+                  <h3 className="font-medium text-white mb-1">{tool.title}</h3>
+                  <p className="text-sm text-gray-300 leading-relaxed">{tool.description}</p>
                 </div>
               </div>
             </button>
@@ -108,12 +109,12 @@ export default function Sidebar({ onAIAction, isProcessing }: SidebarProps) {
         })}
       </div>
 
-      <div className="mt-8 p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-200/50">
+      <div className="mt-8 p-4 bg-gradient-to-br from-gray-700/50 to-gray-600/50 rounded-xl border border-gray-600/50">
         <div className="flex items-center space-x-2 mb-2">
-          <Sparkles className="w-5 h-5 text-purple-600" />
-          <h3 className="font-medium text-gray-900">Conseil Pro</h3>
+          <Sparkles className="w-5 h-5 text-purple-400" />
+          <h3 className="font-medium text-white">Conseil Pro</h3>
         </div>
-        <p className="text-sm text-gray-700 leading-relaxed">
+        <p className="text-sm text-gray-300 leading-relaxed">
           Sélectionnez une partie de votre texte avant d'utiliser un outil IA pour des résultats plus précis.
         </p>
       </div>
