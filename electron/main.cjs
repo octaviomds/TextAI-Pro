@@ -18,7 +18,7 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true,
       enableRemoteModule: false,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.cjs')
     },
     show: false, // Ne pas montrer jusqu'à ce que ready-to-show
     icon: path.join(__dirname, 'assets/icon.png') // Icône de l'app
