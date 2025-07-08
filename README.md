@@ -174,6 +174,16 @@ La configuration Electron Builder est dans `package.json` :
 - Nom: `TextAI Pro`
 - Catégorie: Productivité
 
+   🔧 Pour une vraie intégration IA
+  
+Dans un environnement de production, vous pourriez remplacer le hook useAI simulé par de vraies APIs comme :
+
+OpenAI GPT-4
+Claude d'Anthropic
+Google Gemini
+APIs de traduction (DeepL, Google Translate)
+
+
 ## 🤝 Contribution
 
 1. Fork le projet
